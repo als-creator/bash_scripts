@@ -39,7 +39,7 @@ else
     exit 1
 fi
 
-# Этап 3: Обновление конфигурации systemd и включение сервиса
+# Обновление конфигурации systemd и включение сервиса
 echo "Обновление конфигурации systemd и включение сервиса..."
 sudo systemctl daemon-reload
 sudo systemctl enable --now asf.service
@@ -52,9 +52,6 @@ else
     echo "Ошибка при запуске сервиса!"
     exit 1
 fi
-
-# Этап 4: Показываем полный статус сервиса
-echo "Отображение полного статуса сервиса:"
 sudo systemctl status asf.service
 
 exit 0
