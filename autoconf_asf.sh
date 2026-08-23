@@ -9,8 +9,8 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/run/media/als/Work/Distrib/Linux/ASF/
-ExecStart=/run/media/als/Work/Distrib/Linux/ASF/ArchiSteamFarm
+WorkingDirectory=/home/$USER/.apps/ASF/
+ExecStart=/home/$USER/.apps/ASF/ArchiSteamFarm/
 User=als
 Restart=on-failure
 RestartSec=5s
@@ -29,7 +29,7 @@ fi
 
 # Этап 2: Установка прав на выполнение файла программы
 echo "Установка прав на выполнение..."
-chmod +x /run/media/als/Work/Distrib/Linux/ASF/ArchiSteamFarm
+chmod +x /home/$USER/.apps/ASF/ArchiSteamFarm/
 
 # Проверяем успешность установки прав
 if [ "$?" -eq 0 ]; then
